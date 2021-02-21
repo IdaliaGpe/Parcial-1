@@ -68,19 +68,19 @@ Material:
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _FallOff: 0
+    - _FallOff: 0.5
     - _GlossMapScale: 1
     - _GlossSteps: 7.2
     - _Glossiness: 0.5
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _NormalStrength: 2.21
+    - _NormalStrength: 3.08
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _RimPower: 2.77
+    - _RimPower: 5.81
     - _SmoothnessTextureChannel: 0
-    - _SpecularGloss: 4.84
+    - _SpecularGloss: 5
     - _SpecularHighlights: 1
     - _SpecularPower: 1.62
     - _SrcBlend: 1
