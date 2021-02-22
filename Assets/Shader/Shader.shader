@@ -84,10 +84,10 @@ Shader "Custom/Shader"
 
             //Wrap
             half diff = NdotL * _FallOff + _FallOff;
-            half lightBandsMultiplier = _Steps / 256;
-            half lightBandsAdditive = _Steps / 2;
             
             //Banded
+            half lightBandsMultiplier = _Steps / 256;
+            half lightBandsAdditive = _Steps / 2;
             fixed bandedLightModel = (floor((NdotL * 256  + lightBandsAdditive) / _Steps)) * lightBandsMultiplier;
             
             //Rim
