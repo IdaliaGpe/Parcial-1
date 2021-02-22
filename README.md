@@ -1,13 +1,13 @@
 # Proyecto 1
 
 ## Index
--El modelo de luz __wrap__ y __phong__ incluyendo un color para este mismo.
+-El modelo de luz __wrap__ y __phong__ incluyendo un color para este mismo
 
--Soporte para __mapa de texturas__ y de __normales__ además de controlar su intensidad.
+-Soporte para __mapa de texturas__ y de __normales__ además de controlar su intensidad
 
--__Efecto de horizonte__, contiene el color de la iluminación (albedo).
+-__Efecto de horizonte__, contiene el color de la iluminación (albedo)
 
--Efecto __banded__ que utiliza un __ramp texture__ para darle forma procedural.
+-Efecto __banded__ que utiliza un __ramp texture__ para darle forma procedural
 
 ### Contenido
 Utilizando un modelos de luz llamado __wrap__, el cual se basa del Lambert; iniciando en el color blanco, para lograr este efecto se utilizara "#pragma surface surf (nombre: en este nosotros lo nombramos como deseemos)", en este caso se le llamo Toon, se construirá el modelo de luz con: half4 LightingToon; nunca va a superar al 1 y tampoco va a llegar una sombra debajo de 0.
@@ -17,4 +17,4 @@ Se calcula por medio de la normal: Producto punto ---> dot, el producto punto en
 
 Añadiendo textura se utilizaran los __mapas de textura y de normales__ además de manejar la __intensidad__ de los mapas de normales, para poder guardar una textura es importante en el código márcalas como 2D; manejando la intensidad se colocara un rango de -5 a 5. Durante el código se utilizan samples2D para guardar la variable de nuestras texturas, se proporcionan coordenadas añadiéndoles el uv el cual se encarga de sacarle el color a la textura.
 
-Efecto de horizonte llamado __Rim__ le proporcionara un brillo en las orillas a nuestro modelo, el cual inicia des del centro y finaliza hasta las orillas; no puede ser mayor que 1 y tampoco puede ser menor  0, si esto llegara a pasar, se reiniciaría, volvería a empezar y eso no es lo que se busca.
+Efecto de horizonte llamado __Rim__ le proporcionara un brillo en las orillas a nuestro modelo, el cual inicia des del centro y finaliza hasta las orillas, para lograr esto se necesita invertirlo; no puede ser mayor que 1 y tampoco puede ser menor  0, si esto llegara a pasar, se reiniciaría, volvería a empezar y eso no es lo que se busca.
