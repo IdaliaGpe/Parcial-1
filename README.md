@@ -25,3 +25,5 @@ Para lograr la combinación de esto, se realizar el siguiente múltiplo:
 ```HSLS
 c.rgb = lot * (NdotL * s.Albedo + specularity) * _LightColor0.rgb * rampColor * atten * bandedLightModel * diff;
 ```
+
+Para lograr este proyecto, se utilizó unity y Visual Studio Code.
