@@ -1,10 +1,13 @@
 # Proyecto 1
 
 ## Index
--El modelo de luz __wrap__ y __phong__ incluyendo un color para este mismo
--Soporte para __mapa de texturas__ y de __normales__ además de controlar su intensidad
--__Efecto de horizonte__, contiene el color de la iluminación (albedo)
--Efecto __banded__ que utiliza un __ramp texture__ para darle forma procedural
+-El modelo de luz __wrap__ y __phong__ incluyendo un color para este mismo.
+
+-Soporte para __mapa de texturas__ y de __normales__ además de controlar su intensidad.
+
+-__Efecto de horizonte__, contiene el color de la iluminación (albedo).
+
+-Efecto __banded__ que utiliza un __ramp texture__ para darle forma procedural.
 
 ### Contenido
 Utilizando un modelos de luz llamado __wrap__, el cual se basa del Lambert; iniciando en el color blanco, para lograr este efecto se utilizara "#pragma surface surf (nombre: en este nosotros lo nombramos como deseemos)", en este caso se le llamo Toon, se construirá el modelo de luz con: half4 LightingToon; nunca va a superar al 1 y tampoco va a llegar una sombra debajo de 0.
