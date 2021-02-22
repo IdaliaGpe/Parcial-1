@@ -18,3 +18,10 @@ Se calcula por medio de la normal: Producto punto ---> dot, el producto punto en
 Añadiendo textura se utilizaran los __mapas de textura y de normales__ además de manejar la __intensidad__ de los mapas de normales, para poder guardar una textura es importante en el código márcalas como 2D; manejando la intensidad se colocara un rango de -5 a 5. Durante el código se utilizan samples2D para guardar la variable de nuestras texturas, se proporcionan coordenadas añadiéndoles el uv el cual se encarga de sacarle el color a la textura.
 
 Efecto de horizonte llamado __rim__ le proporcionara un brillo en las orillas a nuestro modelo, el cual inicia des del centro y finaliza hasta las orillas, para lograr esto se necesita invertirlo; no puede ser mayor que 1 y tampoco puede ser menor  0, si esto llegara a pasar, se reiniciaría, volvería a empezar y eso no es lo que se busca. Para que quede perfectamente en la orilla, es necesario añadir la saturación, ya que nos ayudara para controlar el color.
+
+Efecto __banded__ la luz que se reciba, para poder hacer el efecto se utilizaran stees, los cuales se dividen en /256, llamándolo lightband; entre menos líneas abarca más zonas el efecto, para dividirlo en más se utiliza lightbandadd que es igual a stees/2, calculándolo con fixed. _Floor _el cual sirve para redondear variables, con la finalidad de conseguir una línea perfecta. Pero para dar mejor efecto a este, se añadirá la ramp texture, en la cual tendremos que crear una imagen .png, que vaya desde colores oscuros a más claros para realizar la sombra de este mismo. Con la cual es necesario utilizar las iteraciones y por ello se utiliza el tex2D, para añadir textura.
+
+Para lograr la combinación de esto, se realizar el siguiente múltiplo:
+```HSLS
+c.rgb = lot * (NdotL * s.Albedo + specularity) * _LightColor0.rgb * rampColor * atten * bandedLightModel * diff;
+```
